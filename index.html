@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Библиотека</title>
+    <!--<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.1/backbone.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.16/backbone.localStorage.js"></script>-->
+    <script type="text/html" id="single-book-template">
+        <ul class="library-book">
+            <li class="library-book__property">Книга: <%= book %></li>
+            <li class="library-book__property">Автор: <%= author %></li>
+            <li class="library-book__property">Год издания: <%= publishYear %></li>
+            <li class="library-book__property">Издательство: <%=
+                                               publishHouse %></li>
+            <li class="library-book__controls">
+                <button class="delete-book">Удалить</button>
+                <button class="edit-book">Редактировать</button>
+            </li>
+        </ul>
+    </script>
+    <script type="text/html" id="edit-form-template">
+        <label class="book-form__label">
+            <span class="book-form__label-text">Книга: </span>
+            <input id="book-<%= cid %>" class="book-form__input"
+                   type="text">
+            <span class="book-form__error"></span>
+        </label>
+        <label class="book-form__label">
+            <span class="book-form__label-text">Автор: </span>
+            <input id="author-<%= cid %>" class="book-form__input" type="text">
+            <span class="book-form__error"></span>
+        </label>
+        <label class="book-form__label">
+            <span class="book-form__label-text">Год издания: </span>
+            <input id="publish-year-<%= cid %>" class="book-form__input" type="text">
+            <span class="book-form__error"></span>
+        </label>
+        <label class="book-form__label">
+            <span class="book-form__label-text">Издательство: </span>
+            <input id="publish-house-<%= cid %>" class="book-form__input" type="text">
+            <span class="book-form__error"></span>
+        </label>
+        <button class="submit-edited-book book-form__button" type="button">Сохранить
+        </button>
+        <button class="cancel-edit" type="button">Отменить</button>
+    </script>
+    <script src="dist/libs.min.js"></script>
+    <script src="dist/app.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="dist/style.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <form id="book-form" class="book-form">
+        <label class="book-form__label">
+            <span class="book-form__label-text">Книга: </span>
+            <input id="book" class="book-form__input" type="text">
+            <span class="book-form__error"></span>
+        </label>
+        <label class="book-form__label">
+            <span class="book-form__label-text">Автор: </span>
+            <input id="author" class="book-form__input" type="text">
+            <span class="book-form__error"></span>
+        </label>
+        <label class="book-form__label">
+            <span class="book-form__label-text">Год издания: </span>
+            <input id="publish-year" class="book-form__input" type="text">
+            <span class="book-form__error"></span>
+        </label>
+        <label class="book-form__label">
+            <span class="book-form__label-text">Издательство: </span>
+            <input id="publish-house" class="book-form__input" type="text">
+            <span class="book-form__error"></span>
+        </label>
+        <button id="submit-book" class="book-form__button" type="button">Создать
+        </button>
+    </form>
+    <ul id="library-list" class="library-list"></ul>
+</body>
+</html>

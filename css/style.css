@@ -1,0 +1,39 @@
+body {
+    font-family: "Open Sans Condensed", sans-serif;
+}
+.book-form__label {
+    display: block;
+    margin-bottom: 3px;
+}
+.book-form__label-text {
+    display: inline-block;
+    width: 100px;
+}
+.book-form__label-text:hover {
+    cursor: pointer;
+}
+.book-form__error {
+    color: #ff0000;
+}
+.library-list,
+.library-book {
+    list-style: none;
+}
+.library-list {
+    padding: 0;
+}
+.library-book {
+    padding: 0;
+}
+.library-list__item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ececec;
+    width: 400px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+}
+.library-list__item .book-form {
+    margin-top: 15px;
+}
