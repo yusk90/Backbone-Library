@@ -6,9 +6,6 @@
             publishYear: '',
             publishHouse: ''
         },
-        initialize: function () {
-            //console.log('object created');
-        },
         validate: function (attrs) {
             var errors = {};
 
