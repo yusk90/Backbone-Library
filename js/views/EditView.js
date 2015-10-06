@@ -43,8 +43,7 @@
                 });*/
             this.model.save(formData, {
                 success: function () {
-                    this.trigger('disable-edit', '.edit-book', false);
-                    this.close();
+                    this.cancelEdit();
                 }.bind(this)
             });
         },
