@@ -50,6 +50,12 @@
         cancelEdit: function () {
             this.trigger('disable-edit', '.edit-book', false);
             this.close();
+        },
+        showErrors: function (model, errors) {
+            _.each(errors, function (message, name) {
+                this.$('#' + _.hyphen(name) + '-' + model.cid)
+                    .siblings('.book-form__error').html(message);
+            }, this);
         }
     });
 })(app);
